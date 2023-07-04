@@ -1,0 +1,25 @@
+<p><span>In Apache Spark, </span><span>SparkSession</span><span>, </span><span>SparkContext</span><span>, and </span><span>SQLContext</span><span> are important components that serve different purposes:</span></p>
+<ol type="1">
+   <li value="1"><strong>SparkSession:</strong></li>
+   <ul type="disc">
+      <li><span>SparkSession</span><span> is the entry point for Spark applications in Spark 2.0 and later versions.</span></li>
+      <li><span>It combines the functionality of both </span><span>SparkContext</span><span> and </span><span>SQLContext</span><span>, providing a unified interface for working with various data sources and executing Spark operations.</span></li>
+      <li><span>SparkSession</span><span> provides methods for creating DataFrames, executing SQL queries, and accessing Spark's built-in libraries.</span></li>
+      <li><span>It also automatically creates a </span><span>SparkContext</span><span> under the hood, so there's no need to create it explicitly when using </span><span>SparkSession</span><span>.</span></li>
+   </ul>
+   <li><strong>SparkContext:</strong></li>
+   <ul type="disc">
+      <li><span>SparkContext</span><span> was the main entry point in earlier versions of Spark and is still available for backward compatibility.</span></li>
+      <li><span>It represents the connection to a Spark cluster and provides basic functionality for running Spark applications.</span></li>
+      <li><span>SparkContext</span><span> is used for creating RDDs (Resilient Distributed Datasets), performing transformations, and executing actions.</span></li>
+      <li><span>While </span><span>SparkContext</span><span> can be used for low-level Spark programming, it lacks some of the higher-level abstractions and functionalities provided by </span><span>SparkSession</span><span>.</span></li>
+   </ul>
+   <li><strong>SQLContext:</strong></li>
+   <ul type="disc">
+      <li><span>SQLContext</span><span> is the entry point for working with structured data using Spark SQL.</span></li>
+      <li><span>It provides a programming interface for working with structured data, enabling the execution of SQL queries and DataFrame operations.</span></li>
+      <li><span>SQLContext</span><span> can be created using a </span><span>SparkContext</span><span> object.</span></li>
+      <li><span>In Spark 2.0 and later versions, </span><span>SQLContext</span><span> is superseded by </span><span>SparkSession</span><span>, which encapsulates both the functionality of </span><span>SparkContext</span><span> and </span><span>SQLContext</span><span>.</span></li>
+   </ul>
+</ol>
+<p><span>In summary, </span><span>SparkSession</span><span> is the recommended entry point for Spark applications, combining the functionality of </span><span>SparkContext</span><span> and </span><span>SQLContext</span><span>. However, </span><span>SparkContext</span><span> and </span><span>SQLContext</span><span> are still available for backward compatibility or specific use cases that require lower-level or structured data processing functionalities, respectively.</span></p>
